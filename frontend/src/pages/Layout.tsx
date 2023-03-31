@@ -6,7 +6,7 @@ const Layout = () => {
   return (
     <>
       <Navbar />
-      <Outlet />
+      <Outlet /> {/*This is from the package we installed */}
     </>
   );
 };

@@ -10,22 +10,32 @@ import Layout from './pages/Layout';
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path="podcast" element={<Podcast />} />
-          <Route path="movielist" element={<MovieList />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
-    // <div className="App">
-    //   <Home />
-    //   <MovieList />
-    //   <Podcast />
-    // </div>
+    <>
+      <BrowserRouter>
+        {/*This is the way to navigate between pages */}
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            {/*Takes us to navbar and the elements found in it*/}
+            <Route index element={<Home />} />
+            {/*This is default view because it has no specified path*/}
+            <Route path="podcast" element={<Podcast />} />
+            {/*Takes us to podcast page*/}
+            <Route path="movielist" element={<MovieList />} />
+            {/*Takes us to movie list page */}
+          </Route>
+        </Routes>
+      </BrowserRouter>
+      {/* <div className="App">
+        <Home />
+        <MovieList />
+        <Podcast />
+      </div> */}
+    </>
   );
 }
 
 ReactDOM.render(<App />, document.getElementById('root'));
+{
+  /*We use ReactDom to help with Navbar. We had to install this package*/
+}
 export default App;

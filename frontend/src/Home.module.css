@@ -1,3 +1,5 @@
+/* CSS Style choices for all my sites except my navbar */
+
 html {
   background-color: steelblue;
 }
@@ -17,7 +19,7 @@ a {
 }
 
 form {
-  padding-left: 25rem;
+  padding-left: 30rem;
 }
 
 .image_div {
@@ -78,19 +80,3 @@ h6 {
   color: black;
   text-align: center;
 }
-
-/* table {
-  border: 3px white;
-  margin: auto;
-  width: 80%;
-  border-collapse: collapse;
-  text-align: center;
-} */
-
-/* th,
-td {
-  color: white;
-  border: 3px white;
-  text-align: center;
-  padding: 0.7rem;
-} */

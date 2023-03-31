@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Link } from 'react-router-dom';
 
 function Navbar() {
   return (
+    // Lists out links in our navbar by tacking on th routes they'll need to take to get there
     <nav className={styles.nav}>
       <ul>
         <li>

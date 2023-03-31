@@ -1,5 +1,4 @@
 import styles from '../Home.module.css';
-import { BrowserRouter, Route, Link } from 'react-router-dom';
 
 function Podcast() {
   return (
@@ -8,19 +7,10 @@ function Podcast() {
         <h1 className={styles.h1}>This is my podcast page</h1>
         <br></br>
 
+        {/*Made a button for my link because it felt fun and different than just throwing up a href*/}
         <form className={styles.form} action="https://baconsale.com/">
           <input type="submit" value="Check out my awesome podcast!"></input>
         </form>
-
-        {/* <a href="https://baconsale.com/" className="button">
-          Check out my awesome podcast!
-        </a> */}
-
-        {/* <div className="button">
-          <a target="_blank" href="https://baconsale.com/">
-            Click here to check out my awesome podcast!
-          </a>
-        </div> */}
       </html>
     </>
   );
