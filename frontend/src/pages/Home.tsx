@@ -7,8 +7,8 @@ function Home() {
       <html>
         <div>
           <div className={styles.div}>
-            <h1 className={styles.h1}>Welcome friends</h1>
-            <h1 className={styles.h1}>Let's have some fun!</h1>
+            <h1 className={styles.h1}>Welcome friends,</h1>
+            <h1 className={styles.h1}>let's have some fun!</h1>
           </div>
 
           <div className={styles.image_div}>

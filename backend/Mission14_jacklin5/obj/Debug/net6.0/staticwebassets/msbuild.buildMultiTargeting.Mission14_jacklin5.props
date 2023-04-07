@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Mission14_jacklin5.props" />
+</Project>

@@ -1,12 +1,20 @@
 import data from '../MovieData.json';
 import styles from '../Home.module.css';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { Movie } from '../types/movie';
 
-{
-  /*Let's us grab data from json object*/
-}
-const MD = data.MovieData;
 function MovieList() {
+  const [movieData, setMovieData] = useState<Movie[]>([]);
+
+  useEffect(() => {
+    const fetchMovie = async () => {
+      const rsp = await fetch('https://localhost:4000/movie');
+      const temp = await rsp.json();
+      setMovieData(temp);
+    };
+    fetchMovie();
+  }, []);
+
   return (
     <>
       <html>
@@ -25,23 +33,23 @@ function MovieList() {
               <th className={styles.th}>Rating</th>
               <th className={styles.th}>Category</th>
               <th className={styles.th}>Edited</th>
+              <th className={styles.th}>Lent To</th>
+              <th className={styles.th}>Notes</th>
             </thead>
             <tbody>
-              {MD.map(
-                (
-                  m /*Brings out individual elements of the json object to add to our table*/,
-                ) => (
-                  <tr>
-                    <td className={styles.td}>{m.Title}</td>
-                    <td className={styles.td}>{m.Year}</td>
-                    <td className={styles.td}>{m.Director}</td>
-                    <td className={styles.td}>{m.Rating}</td>
-                    <td className={styles.td}>{m.Category}</td>
-                    <td className={styles.td}>{m.Edited}</td>{' '}
-                    {/*Added element field*/}
-                  </tr>
-                ),
-              )}
+              {movieData.map((m) => (
+                <tr key={m.movieId}>
+                  <td className={styles.td}>{m.category}</td>
+                  <td className={styles.td}>{m.title}</td>
+                  <td className={styles.td}>{m.year}</td>
+                  <td className={styles.td}>{m.director}</td>
+                  <td className={styles.td}>{m.rating}</td>
+                  <td className={styles.td}>{m.edited}</td>
+                  <td className={styles.td}>{m.lentTo}</td>
+                  <td className={styles.td}>{m.notes}</td>
+                  {/*Added element field*/}
+                </tr>
+              ))}
             </tbody>
           </table>
         </div>

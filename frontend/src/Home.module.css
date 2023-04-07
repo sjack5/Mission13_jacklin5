@@ -19,7 +19,9 @@ a {
 }
 
 form {
-  padding-left: 30rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .image_div {
@@ -55,6 +57,8 @@ table {
   border-bottom: 6px solid white;
   text-align: center;
   border-right: 3px solid white;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .td {
